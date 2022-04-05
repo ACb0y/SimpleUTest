@@ -89,7 +89,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_EQ(left, right) \
   if (left != right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << "!=" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << "!=" << right << std::endl; \
     SetResult(false); \
     return; \
   }
@@ -97,7 +97,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_NE(left, right) \
   if (left == right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << "==" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << "==" << right << std::endl; \
     SetResult(false); \
     return; \
   }
@@ -105,7 +105,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_LT(left, right) \
   if (left >= right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << ">=" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << ">=" << right << std::endl; \
     SetResult(false); \
     return; \
   }
@@ -113,7 +113,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_LE(left, right) \
   if (left > right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << ">" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << ">" << right << std::endl; \
     SetResult(false); \
     return; \
   }
@@ -121,7 +121,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_GT(left, right) \
   if (left <= right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << "<=" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << "<=" << right << std::endl; \
     SetResult(false); \
     return; \
   }
@@ -129,7 +129,7 @@ void test_case_name##_TEST::Run()
 #define ASSERT_GE(left, right) \
   if (left < right) \
   { \
-    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << "." << left << "<" << right << std::endl; \
+    std::cout << "failed at " <<  __FILE__ << ":" << __LINE__ << ". " << left << "<" << right << std::endl; \
     SetResult(false); \
     return; \
   }

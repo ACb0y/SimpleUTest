@@ -24,6 +24,16 @@ TEST_CASE(fun1Test) {
   ASSERT_EQ(fun1(2), 2);
   ASSERT_TRUE(fun2());
   ASSERT_FALSE(fun3());
+  // !=
+  ASSERT_NE(fun1(1), 2);
+  // >
+  ASSERT_GT(fun1(1), 0);
+  // >=
+  ASSERT_GE(fun1(1), 1);
+  // <
+  ASSERT_LT(fun1(2), 3);
+  // <=
+  ASSERT_LE(fun1(2), 2);
 }
 
 int main() {
