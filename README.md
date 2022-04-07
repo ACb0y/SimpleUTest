@@ -10,6 +10,3 @@
 - ASSERT_LE <= 
 - ASSERT_GT >
 - ASSERT_GE >=
-
-# 支持的特性
-- TestCase事件-Before，After：case执行之前执行Before函数，case执行之后执行After函数。
