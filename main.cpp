@@ -19,7 +19,7 @@ bool fun3() {
 }
 
 TEST_CASE(fun1Test) {
-  ASSERT_EQ(fun1(1), 1);
+  ASSERT_EQ(fun1(2), 2);
   ASSERT_TRUE(fun2());
   ASSERT_FALSE(fun3());
   // !=
