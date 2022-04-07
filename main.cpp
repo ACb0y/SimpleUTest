@@ -20,12 +20,10 @@ bool fun3() {
 
 TEST_CASE(fun1Test) {
   ASSERT_EQ(fun1(1), 1);
-  ASSERT_EQ(fun1(2), 2);
-  ASSERT_EQ(fun1(2), 2);
   ASSERT_TRUE(fun2());
   ASSERT_FALSE(fun3());
   // !=
-  ASSERT_NE(fun1(1), 2);
+  ASSERT_NE(fun1(1), 0);
   // >
   ASSERT_GT(fun1(1), 0);
   // >=
@@ -36,7 +34,8 @@ TEST_CASE(fun1Test) {
   ASSERT_LE(fun1(2), 2);
 }
 
-int main() {
-  RUN_ALL_TESTS();
-  return 0;
+TEST_CASE(func2Test) {
+  ASSERT_TRUE(not fun3());
 }
+
+RUN_ALL_TESTS();
